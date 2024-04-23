@@ -1,46 +1,71 @@
-# Project README
+### Project Name: Authentication System
 
-This project is a simple web application that allows users to register, login, and access a secrets page. The application utilizes Node.js with the Express framework for the backend, MongoDB as the database, and EJS for templating.
+---
 
-### Prerequisites
-Before running the application, make sure you have the following installed:
+#### Description
+This project is an authentication system built using Node.js, Express, and MongoDB. It allows users to register, login, submit secrets, and view secrets shared by other users.
+
+---
+
+#### Installation
+1. Clone the repository.
+2. Install dependencies by running `npm install`.
+3. Create a `.env` file and add your database connection string.
+4. Start the server by running `node app.js`.
+5. Open your browser and visit `http://localhost:3000` to access the application.
+
+---
+
+#### Features
+- Registration: Users can create an account by providing a username and password.
+- Login: Registered users can log in to access their account.
+- Submit Secrets: Logged-in users can submit their secrets.
+- View Secrets: Users can view secrets shared by other users.
+
+---
+
+#### Technologies Used
 - Node.js
+- Express
 - MongoDB
+- EJS (Embedded JavaScript)
+- Passport.js
 
-### Getting Started
-1. Clone this repository.
-2. Run `npm install` to install the dependencies.
-3. Create a `.env` file in the root directory and add your secret key:
-   ```
-   SECRET=your_secret_key_here
-   ```
-4. Start your MongoDB server.
-5. Run `node app.js` to start the application.
+---
 
-### Features
-- **Home Page:** Accessible at the root URL ("/"), it serves as the landing page.
-- **Login Page:** Visit "/login" to log in with your credentials.
-- **Registration Page:** Visit "/register" to create a new user account.
-- **Secrets Page:** Once logged in, users can access the secrets page.
+#### Routes
+- `/`: Home page.
+- `/login`: Login page.
+- `/register`: Registration page.
+- `/secrets`: View shared secrets page.
+- `/submit`: Submit secret page.
+- `/logout`: Logs out the user.
 
-### Dependencies
+---
+
+#### Dependencies
 - dotenv
 - express
-- body-parser
 - ejs
 - mongoose
-- mongoose-encryption
+- express-session
+- passport
+- passport-local-mongoose
+- body-parser
 
-### Usage
-1. Visit the application on `http://localhost:3000`.
-2. Register a new account or login with existing credentials.
-3. Access the secrets page after successful authentication.
+---
 
-### Security
-- User passwords are encrypted in the database using the `mongoose-encryption` plugin.
+#### Developer Notes
+- The project uses sessions for user authentication and authorization.
+- MongoDB is used to store user data such as username, password, and secrets.
+- Passport.js is used for handling user authentication strategies.
 
-### Contributions
-Contributions are welcome. Feel free to fork the repository, make changes, and submit a pull request.
+---
 
-### License
+#### Contributors
+- Mohammad Salehi
+
+---
+
+#### License
 This project is licensed under the MIT License.
